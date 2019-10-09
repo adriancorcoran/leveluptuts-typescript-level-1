@@ -43,3 +43,17 @@ const sayWord = (word = "Hello", ...otherStuff: string[]): string => {
 };
 
 sayWord("Adrian", "Corcoran");
+
+//  ------------------------------------------------
+
+// implicit types
+
+// let newName: any = "Scott";  //  don't get in this habit
+let newName = "Scott"; //  compiler auto knows that the type is a. string
+newName = "Wes";
+// newName = 10;
+
+// inherits type from initial declaration, not current value
+
+let newNameTwo = newName;
+// newNameTwo = 10;
