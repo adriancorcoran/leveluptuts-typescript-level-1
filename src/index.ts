@@ -163,3 +163,27 @@ outputInput(13);
 
 const myOutputString: string = outputInput("hi");
 const myOutputNumber: number = outputInput(3);
+
+//  ------------------------------------------------
+
+// Duck Typing
+
+// create items which are similar to other items without having to specifically declare them as such
+
+class Dancer implements Person {
+  name: string;
+  age?: number;
+  surname?: string;
+}
+
+let Karen: Person = new Dancer();
+
+const fake = {
+  name: "Adrian",
+  year: 1980
+};
+
+// typescript doesn't have an issue with this because the properties of fake, match the min requirements for the Dancer class
+// you can also add extra properties such as year
+// interface just demands the minimum
+Karen = fake;
