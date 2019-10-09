@@ -78,6 +78,39 @@ makeMargin("10");
 let dog: string | undefined = "Riggs";
 dog = null; //  can be reset to null
 dog = "Dott";
-dog = undefined;
-dog = 10;
-dog = true;
+// dog = undefined;
+// dog = 10;
+// dog = true;
+
+//  ------------------------------------------------
+
+// interface allows type checking of data of a particlar shape
+// define interface, give it properties and then use it as arguments for a function
+
+interface Person {
+  name: string;
+  age?: number; //  optional
+  surname?: string;
+}
+
+const sayName = ({ name, age, surname }: Person): Person => {
+  console.log(name);
+  return { name, age, surname };
+};
+
+// const sayName = ({ name, age }: Person): string => {
+//   console.log(name);
+//   return name;
+// };
+
+// sayName("Karen", 39);
+// sayName(39, "Karen"); //  won't work, the order of types matters
+sayName({
+  name: "Karen",
+  age: 39
+});
+sayName({
+  age: 39,
+  name: "Karen",
+  surname: "McCrann"
+});
