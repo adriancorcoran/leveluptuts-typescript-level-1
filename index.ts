@@ -22,9 +22,24 @@ const tablet: any = 3;
 
 // functions
 
-const sayWord = (word: string): string => {
+//  ------------------------------------------------
+
+// ? for optional params
+// const sayWord = (word?: string): string => {
+//   console.log(word || "Hello");
+//   return word || "Hello";
+// };
+
+// sayWord();
+
+//  ------------------------------------------------
+
+// default params
+// rest params - same as js
+const sayWord = (word = "Hello", ...otherStuff: string[]): string => {
+  console.log(otherStuff);
   console.log(word);
   return word;
 };
 
-sayWord("Adrian");
+sayWord("Adrian", "Corcoran");
