@@ -150,4 +150,16 @@ redWings.teamName;
 
 //  ------------------------------------------------
 
-// Modules
+// Generics
+// define a generic type when you need to match something but not sure what
+// so <T> below simple means whatever type is passed in will be used and returned where T is referenced
+
+const outputInput = <T>(arg: T): T => {
+  return arg;
+};
+
+outputInput("hi");
+outputInput(13);
+
+const myOutputString: string = outputInput("hi");
+const myOutputNumber: number = outputInput(3);
