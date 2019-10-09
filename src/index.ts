@@ -1,4 +1,4 @@
-import Job, { Person, Type, Type2 } from "./src/interfaces";
+import Job, { Person, Type, Type2 } from "./interfaces";
 
 const isOpen: boolean = false;
 
