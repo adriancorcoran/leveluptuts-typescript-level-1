@@ -1,0 +1,23 @@
+{
+  "name": "leveluptuts-typescript-level-1",
+  "description": "Learning Typescript with Scott in Level Up Tuts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriancorcoran/leveluptuts-typescript-level-1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adriancorcoran/leveluptuts-typescript-level-1/issues"
+  },
+  "homepage": "https://github.com/adriancorcoran/leveluptuts-typescript-level-1#readme",
+  "devDependencies": {
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {}
+}
