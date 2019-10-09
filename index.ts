@@ -2,7 +2,7 @@ const isOpen: boolean = false;
 
 const myName: string = "Adrian";
 
-const myAGE: number = 38;
+const myAge: number = 38;
 
 const list: number[] = [0, 1, 2];
 
