@@ -19,3 +19,12 @@ const job: Job = Job.WebDev;
 const phone: any = "Pixel";
 
 const tablet: any = 3;
+
+// functions
+
+const sayWord = (word: string): string => {
+  console.log(word);
+  return word;
+};
+
+sayWord("Adrian");
