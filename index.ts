@@ -1,3 +1,5 @@
+import Job, { Person, Type, Type2 } from "./src/interfaces";
+
 const isOpen: boolean = false;
 
 const myName: string = "Adrian";
@@ -7,12 +9,6 @@ const myAge: number = 38;
 const list: number[] = [0, 1, 2];
 
 const me: [string, number, boolean] = ["Adrian", 38, false];
-
-enum Job {
-  WebDev,
-  WebDesigner,
-  PM
-}
 
 const job: Job = Job.WebDev;
 
@@ -87,12 +83,6 @@ dog = "Dott";
 // interface allows type checking of data of a particlar shape
 // define interface, give it properties and then use it as arguments for a function
 
-interface Person {
-  name: string;
-  age?: number; //  optional
-  surname?: string;
-}
-
 const sayName = ({ name, age, surname }: Person): Person => {
   console.log(name);
   return { name, age, surname };
@@ -123,23 +113,9 @@ sayName({
 // can only be one of these values
 // they are also indexed
 
-// Numeric enum
-enum Type {
-  Video, //  0
-  BlogPost, //  1
-  Quiz //2
-}
-
 const createContent = (contentType: Type) => {};
 createContent(Type.Video);
 console.log(Type.Quiz);
-
-// String enum
-enum Type2 {
-  Video = "VIDEO", //  0
-  BlogPost = "BLOG_POST", //  1
-  Quiz = "QUIZ" //2
-}
 
 const createContent2 = (contentType: Type2) => {};
 createContent2(Type2.Video);
@@ -171,3 +147,7 @@ const redWings = new Team("Red Wings");
 
 redWings.score();
 redWings.teamName;
+
+//  ------------------------------------------------
+
+// Modules
