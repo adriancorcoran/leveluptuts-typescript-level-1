@@ -49,7 +49,7 @@ sayWord("Adrian", "Corcoran");
 // implicit types
 
 // let newName: any = "Scott";  //  don't get in this habit
-let newName = "Scott"; //  compiler auto knows that the type is a. string
+let newName: string = "Scott"; //  compiler auto knows that the type is a. string
 newName = "Wes";
 // newName = 10;
 
@@ -57,3 +57,27 @@ newName = "Wes";
 
 let newNameTwo = newName;
 // newNameTwo = 10;
+
+//  ------------------------------------------------
+
+// union types with |
+
+const makeMargin = (x: string | number): string => {
+  return `margin: ${x}ps`;
+};
+
+makeMargin(10);
+makeMargin("10");
+
+//  ------------------------------------------------
+
+// null types - anything can also be null or undefined
+//  null types are auto added to standard type declarations
+// if you wanna say it can never be null or undefined (uinless you set that it can) you run it with the 'strict null check' flag
+
+let dog: string | undefined = "Riggs";
+dog = null; //  can be reset to null
+dog = "Dott";
+dog = undefined;
+dog = 10;
+dog = true;
