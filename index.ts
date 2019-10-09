@@ -114,3 +114,33 @@ sayName({
   name: "Karen",
   surname: "McCrann"
 });
+
+//  ------------------------------------------------
+
+// Enums - protect you from values you weren't expected in your code
+
+// Enums allow us to define a set of named constants - commonly in select list
+// can only be one of these values
+// they are also indexed
+
+// Numeric enum
+enum Type {
+  Video, //  0
+  BlogPost, //  1
+  Quiz //2
+}
+
+const createContent = (contentType: Type) => {};
+createContent(Type.Video);
+console.log(Type.Quiz);
+
+// String enum
+enum Type2 {
+  Video = "VIDEO", //  0
+  BlogPost = "BLOG_POST", //  1
+  Quiz = "QUIZ" //2
+}
+
+const createContent2 = (contentType: Type2) => {};
+createContent2(Type2.Video);
+console.log(Type2.Quiz);
