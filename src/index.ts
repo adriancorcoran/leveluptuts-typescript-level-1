@@ -4,7 +4,7 @@ const isOpen: boolean = false;
 
 const myName: string = "Adrian";
 
-const myAge: number = 38;
+const myAge: number = 39;
 
 const list: number[] = [0, 1, 2];
 
@@ -31,6 +31,7 @@ const tablet: any = 3;
 //  ------------------------------------------------
 
 // default params
+// by defining the default, no need to specify the type as ts will pick up on it from the default param type
 // rest params - same as js
 const sayWord = (word = "Hello", ...otherStuff: string[]): string => {
   console.log(otherStuff);
@@ -45,7 +46,7 @@ sayWord("Adrian", "Corcoran");
 // implicit types
 
 // let newName: any = "Scott";  //  don't get in this habit
-let newName: string = "Scott"; //  compiler auto knows that the type is a. string
+let newName: string = "Scott"; //  tecnically don't need to specify type, compiler auto knows that the type is a. string
 newName = "Wes";
 // newName = 10;
 
@@ -68,7 +69,7 @@ makeMargin("10");
 //  ------------------------------------------------
 
 // null types - anything can also be null or undefined
-//  null types are auto added to standard type declarations
+// null types are auto added to standard type declarations
 // if you wanna say it can never be null or undefined (uinless you set that it can) you run it with the 'strict null check' flag
 
 let dog: string | undefined = "Riggs";
